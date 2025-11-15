@@ -1,17 +1,17 @@
-# amazon-cognito-custom-auth-lab
+## **Amazon-cognito-custom-auth-lab**
 
 This project demonstrates a serverless custom authentication flow using Amazon Cognito, AWS Lambda, and Amazon CloudWatch. It was completed as part of a hands-on AWS lab to build a secure and flexible user login authentication process.
 
-## 🧩 Lab Objectives
-- ✅ Configured an Amazon Cognito user pool.
-- ✅ Created Lambda functions for custom authentication flow:
+## **Objectives**
+- Configured an Amazon Cognito user pool.
+- Created Lambda functions for custom authentication flow:
   - `DefineAuthFunction`
   - `AuthFunction`
   - `AuthChallengeResponseFunction`
-- ✅ Integrated the flow with CloudWatch Logs for observability.
-- ✅ Successfully tested the authentication lifecycle.
+- Integrated the flow with CloudWatch Logs for observability.
+- Successfully tested the authentication lifecycle.
 
-## 🛠️ Architecture
+##  **Architecture**
 ![image](https://github.com/user-attachments/assets/aedc1352-d5f6-4bb0-931b-c60cd9d99fbf)
 
 The solution uses three Lambda functions triggered in sequence by Amazon Cognito:
@@ -45,17 +45,23 @@ The solution uses three Lambda functions triggered in sequence by Amazon Cognito
 ![LambdaTriggersCreated](https://github.com/user-attachments/assets/7af705d3-d4c8-4bba-a395-ba7926a24ca9)
 
 
-## 📂 Tech Stack
+## **Tech Stack**
 
 - Amazon Cognito  
 - AWS Lambda (Python 3.13)  
 - Amazon CloudWatch  
 
-## 🚀 How It Works
+## **How It Works**
 
 1. User initiates login through the Cognito user pool.
 2. Cognito triggers the first Lambda (`DefineAuthFunction`) to start a `CUSTOM_CHALLENGE`.
 3. The second Lambda (`AuthFunction`) generates a code challenge for the user.
 4. The user responds with the code verified by the third Lambda (`AuthChallengeResponseFunction`).
 5. All responses and outcomes are tracked in CloudWatch.
+
+## **Amarachi Emeziem**
+
+Cloud Engineer/Security 
+
+LinkedIn Profile: https://www.linkedin.com/in/amarachilemeziem/
 
